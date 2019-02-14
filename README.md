@@ -1,3 +1,3 @@
-#Responsive page with GRID CSS
+#goWindy
 
-This is my first responsive page with Grid CSS
+Green Energy provider landing page, using Grid CSS.
