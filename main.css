@@ -14,6 +14,7 @@ header{
     background-image: url(/assets/header_windTurbine.jpeg);
     display: grid;
     grid-template: 20% 20% 30% 10% 20%/ 60% 20% 20%;
+    box-shadow: 0 0.25vh 1vh grey;
 }
 
 .logo{
@@ -22,10 +23,17 @@ header{
     text-align: center;
     font-size: 36px;
 }
-
+.logo h1 img{
+    height: 36px;
+    
+}
+.go-logo{
+    color: black;
+}
 .motto{
     grid-area: 3/2/4/4;
     font-size: 20px;
+    padding-right: 1vw;
 }
 
 .get-started-container{
@@ -39,7 +47,7 @@ header{
 #get-started-button{
    width: 130px;
    height: 40px;
-   background-color:rgb(131, 174, 200);
+   background-color:black;
    border-color: transparent;
    border-radius: 2.5px;
    color: white;
@@ -48,10 +56,10 @@ header{
 #coverage-map-button{
    width: 130px;
    height: 40px;
-   background-color: rgb(90, 190, 250);
+   background-color: white;
    border-color: transparent;
    border-radius: 2.5px;
-   color: white;
+   color: black;
 }
 
 .features{
@@ -62,7 +70,21 @@ header{
     display: grid;
     grid-template: 100%/ 10% 20% 10% 20% 10% 20% 10%;
 }
-
+.features div img{
+    width: 7.5vw;
+    height: 7.5vh;
+    padding-top: 1vh;
+}
+.features div{
+    text-align: center;
+    box-shadow: 0.25vw 0.25vh 1vh grey;
+}
+.features div h4{
+    margin-bottom: 0;
+}
+.features div p{
+    font-size: 15px;
+}
 .trust{
     grid-area: 1/2/2/3;
 }
@@ -147,12 +169,32 @@ header{
     text-align: center;
 }
 
-footer{
-    width: 100vw;
-    height: 30vh;
-    background-color:rgb(76, 109, 129);
+.why div img{
+    height: 70vh;
+    padding: 10vh 0 0 7vw;
 }
 
+.green-energy-description, .sustainable-description{
+    box-shadow: -0.25vw 0.25vh 1vh grey;
+}
+
+.easy-install-description{
+    box-shadow: 0.25vw 0.25vh 1vh grey;
+}
+
+footer{
+    width: 100vw;
+    height: 25vh;
+    background-color:rgb(76, 109, 129);
+}
+footer ul{
+    padding-top: 2vh;
+}
 footer p{
-    padding: 0;
+    padding: 8vh 0 0 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
 }
