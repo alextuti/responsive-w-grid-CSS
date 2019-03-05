@@ -1,3 +1,9 @@
+:root{
+    --box-color: rgb(99, 136, 159);
+    --light: white;
+    --dark: black;
+    --shadow: 0.25vw 0.25vh 1vh grey;
+}
 html{
     box-sizing: border-box;
 }
@@ -5,20 +11,20 @@ body{
     margin: 30px 50px;
     background-color: #7997A1;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: var(--light);
 }
 
 header{
     margin: 0;
     padding: 0;
     width: auto;
-    height: 100vh;
+    height: 95vh;
     background-image: url(/assets/header_windTurbine.jpeg);
     background-size: cover;
     background-position: center;
     display: grid;
     grid-template: 20% 20% 30% 10% 20%/ 60% 20% 20%;
-    box-shadow: 0 0.25vh 1vh grey;
+    box-shadow: var(--shadow);
     justify-self: center;
 }
 
@@ -33,7 +39,7 @@ header{
     
 }
 .go-logo{
-    color: black;
+    color: var(--dark);
 }
 .motto{
     grid-area: 3/2/4/4;
@@ -52,19 +58,19 @@ header{
 #get-started-button{
    width: 130px;
    height: 40px;
-   background-color:black;
+   background-color:var(--dark);
    border-color: transparent;
    border-radius: 2.5px;
-   color: white;
+   color: var(--light);
 }
 
 #coverage-map-button{
    width: 130px;
    height: 40px;
-   background-color: white;
+   background-color: var(--light);
    border-color: transparent;
    border-radius: 2.5px;
-   color: black;
+   color: var(--dark);
 }
 
 .features{
@@ -84,7 +90,7 @@ header{
 }
 .features div{
     text-align: center;
-    box-shadow: 0.25vw 0.25vh 1vh grey;
+    box-shadow: var(--shadow);
 }
 .features div h4{
     margin:0;
@@ -105,7 +111,7 @@ header{
 }
 
 .trust, .price, .support{
-    background-color: rgb(99, 136, 159);
+    background-color: var(--box-color);
     border-radius: 2.5px;
 }
 
@@ -115,7 +121,7 @@ header{
     width: auto;
     height: 250vh;
     display: grid;
-    grid-template: repeat(auto-fit, minmax(400px, 1fr))/ repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template: repeat(auto-fit, minmax(400px, 1fr))/ repeat(auto-fit, minmax(100px, 1fr)); 
     grid-gap: 50px;
 }
 
@@ -135,7 +141,7 @@ header{
 
 .green-energy-description{
     grid-area: 2/2/3/4;
-    background-color:rgb(30, 109, 157);
+    background-color: var(--box-color);
     border-top-left-radius: 2.5px;
     border-bottom-left-radius: 2.5px;
 }
@@ -146,7 +152,7 @@ header{
 
 .easy-install-description{
     grid-area: 3/1/4/3;
-    background-color:rgb(30, 109, 157);
+    background-color: var(--box-color);
     border-top-right-radius: 2.5px;
     border-bottom-right-radius: 2.5px;
 }
@@ -157,7 +163,7 @@ header{
 
 .sustainable-description{
     grid-area: 4/2/5/4;
-    background-color:rgb(30, 109, 157);
+    background-color: var(--box-color);
     border-top-left-radius: 2.5px;
     border-bottom-left-radius: 2.5px;
 }
@@ -186,11 +192,11 @@ header{
 
 
 .green-energy-description, .sustainable-description{
-    box-shadow: -0.25vw 0.25vh 1vh grey;
+    box-shadow: var(--shadow);
 }
 
 .easy-install-description{
-    box-shadow: 0.25vw 0.25vh 1vh grey;
+    box-shadow: var(--shadow);
 }
 
 footer{
@@ -207,5 +213,63 @@ footer p{
 
 footer a{
     text-decoration: none;
-    color: white;
+    color: var(--light);
+}
+
+@media (max-width: 750px){
+    .why{
+        grid-template-areas:
+        'why-description why-description'
+        'green-energy-icon green-energy'
+        'easy-install easy-install-icon'
+        'sustainable-icon sustainable' ;
+    }
+    .why-description{
+        grid-area: why-description;
+    }
+
+    .green-energy-icon{
+        grid-area: green-energy-icon; 
+    }
+    
+    .green-energy-description{
+        grid-area: green-energy;
+    }
+    
+    .easy-install-icon{
+        grid-area: easy-install-icon;
+    }
+    
+    .easy-install-description{
+        grid-area: easy-install;
+    }
+    
+    .sustainable-icon{
+        grid-area: sustainable-icon;
+    }
+    
+    .sustainable-description{
+        grid-area: sustainable;
+    }
+
+    .header{
+        grid-template-areas:
+        'logo logo'
+        'motto motto'
+        'getstarted-btn coveragemap-btn';
+    }
+
+    .logo{
+        grid-area: logo;
+    }
+    .motto{
+        grid-area: motto;
+    }
+    .get-started-container{
+        grid-area: getstarted-btn;
+    }
+    .coverage-map-container{
+        grid-area: coveragemap-btn;
+    }
+    
 }
